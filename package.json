@@ -1,0 +1,27 @@
+{
+  "name": "curso-cypress2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "generar-reporte": "allure generate allure-results -o allure-report --clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnsoniDC-Ensitech/curso-Cypress2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnsoniDC-Ensitech/curso-Cypress2/issues"
+  },
+  "homepage": "https://github.com/AnsoniDC-Ensitech/curso-Cypress2#readme",
+  "devDependencies": {
+    "cypress": "^15.2.0"
+  },
+  "dependencies": {
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "allure-commandline": "^2.34.1"
+  }
+}
