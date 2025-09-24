@@ -3,17 +3,18 @@ import { LoginElements } from "./login.elements";
 
 export class LoginMethos{
     static insertUsername(username){
-        LoginElements.textboxes.username.type(username)
+        LoginElements.textboxes.username.invoke('val', username)
     }
     static insertPassword(password){
-        LoginElements.textboxes.password.type(password)
+        LoginElements.textboxes.password.invoke('val', password)
     }
 
     static clickOnLoginButton(){
-        LoginElements.buttons.login.click()
+        LoginElements.buttons.login.click({force:true})
+            
     }
 
-    static login (username, password){
+    static login1 (username, password){
         this.insertUsername(username)
         this.insertPassword(password)
         this.clickOnLoginButton()

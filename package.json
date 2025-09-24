@@ -8,7 +8,7 @@
     "ejecutar-pruebas": "npx cypress run --headed --env allure=true",
     "generar-reporte": "allure generate allure-results -o allure-report --clean",
     "abrir-reporte": "allure open",
-    "test": "npm rum limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte && npm run abrir-reporte"
+    "test": "npm run limpiar-reporte && npm run ejecutar-pruebas && npm run generar-reporte && npm run abrir-reporte"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/AnsoniDC-Ensitech/curso-Cypress2#readme",
   "devDependencies": {
-    "cypress": "^15.2.0"
+    "cypress": "^15.2.0",
+    "npm-run-all": "^4.1.5"
   },
   "dependencies": {
     "@shelex/cypress-allure-plugin": "^2.41.2",
