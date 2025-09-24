@@ -1,4 +1,5 @@
 
+import { HomePageMetodos } from "./pages/homePage/homePage.methodos";
 import { LoginMethos } from "./pages/login/login.methods"
 
 describe('template spec', () => {
@@ -13,5 +14,11 @@ describe('template spec', () => {
     LoginMethos.iniciarSesion(user,passw)
     cy.wait(9000)
     cy.get('a#nameofuser').should('contains.text', user)
+  })
+
+  it ('seleccionar producto', ()=>{
+    cy.visit('https://demoblaze.com/')
+    HomePageMetodos.clickOnProducts('Sony xperia z5')
+    cy.wait(9000)
   })
 })
