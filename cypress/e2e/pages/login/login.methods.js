@@ -10,11 +10,11 @@ export class LoginMethos{
     }
 
     static clickOnLoginButton(){
-        LoginElements.buttons.login.click({force:true})
+        return LoginElements.buttons.login.click({force:true})
             
     }
 
-    static login1 (username, password){
+    static iniciarSesion (username, password){
         this.insertUsername(username)
         this.insertPassword(password)
         this.clickOnLoginButton()
