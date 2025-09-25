@@ -24,6 +24,5 @@ export class SignupMetodos{
      static verifySignUpFailedfulMessageIsDisplay(){
         CommonPageMetodos.verifyAlert("This user already exist.");
     }
-
     
 }

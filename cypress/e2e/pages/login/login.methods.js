@@ -1,6 +1,7 @@
 import { use } from "react";
 import { LoginElements } from "./login.elements";
 import { Logger } from "../../Util/logger";
+import { CommonPageMetodos } from "../common-page/common-page.methods";
 
 export class LoginMethos{
     static insertUsername(username){
@@ -22,5 +23,8 @@ export class LoginMethos{
         this.insertPassword(password)
         Logger.subPaso('Dar clic al botón Log In')
         this.clickOnLoginButton()
+    }
+    static verifyAlertOfUserNotExist(){
+        CommonPageMetodos.verifyAlert("Wrong password.")
     }
 }
