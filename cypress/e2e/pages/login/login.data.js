@@ -5,4 +5,10 @@ export class LoginData{
             password: 'abc'
         }
     }
+    static get accesosValidos(){
+        return{
+            username: "tesqa10",
+            password:"12345678"
+        }
+    }
 }
