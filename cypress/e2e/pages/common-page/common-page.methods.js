@@ -46,4 +46,7 @@ export class CommonPageMetodos{
        return result;
     }
 
+    static verifyThatExistTextLogIn(username){
+        CommonPageElementos.UsuarioLogueado.should("have.text",`Welcome ${username}`);
+    }
 }

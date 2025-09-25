@@ -1,11 +1,12 @@
 import { CommonPageData } from "../pages/common-page/common-page.data";
 import { CommonPageMetodos } from "../pages/common-page/common-page.methods";
+import { LoginData } from "../pages/login/login.data";
 import { SignupMetodos } from "../pages/signup/signup.methods";
 import { Logger } from "../Util/logger";
 
 const user = CommonPageMetodos.generateRandomString();
 const password = CommonPageMetodos.generateRandomString(7);
-const userExistente = "tesqa10";
+const userExistente = LoginData.accesosValidos.username;
 
 describe(CommonPageData.testSuites.registro,()=>{
     it ('Registro de usuario válido', ()=>{

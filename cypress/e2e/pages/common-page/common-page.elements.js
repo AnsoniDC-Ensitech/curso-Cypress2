@@ -22,4 +22,8 @@ export class CommonPageElementos{
     };
    }
 
+   static get UsuarioLogueado(){
+    return cy.get("a#nameofuser");
+   }
+
 }
