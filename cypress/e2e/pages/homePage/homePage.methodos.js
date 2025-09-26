@@ -14,4 +14,8 @@ export class HomePageMetodos{
     static clickOnProducts(produc){
         HomePageElementos.producto(produc).click();
     }
+
+    static verifyProductsDisplayed(prodcutName){
+        HomePageElementos.producto(prodcutName).should('be.visible')
+    }
 }
