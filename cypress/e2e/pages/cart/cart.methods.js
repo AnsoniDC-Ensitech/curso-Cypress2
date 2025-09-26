@@ -7,4 +7,8 @@ export class CartMetodos{
     static clickMenuBarra(nomBarra){
         return CartElementos.barradeNavegacion.Navegar(nomBarra).click();
     }
+
+    static verifyThatProducsBeVisbleInDisplayCart(prodcutName){
+        CartElementos.links.detele(prodcutName).should('be.visible');
+    }
 }
