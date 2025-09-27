@@ -13,19 +13,28 @@ export class PlaceOrderMetodos{
     static insertarTarjeta(card){
         PlaceOrderElementos.inputForm.card.invoke("val", card);
     }
-    static insertarMes(mounth){
-        PlaceOrderElementos.inputForm.mes.invoke("val", mounth);
+    static insertarMes(month){
+        PlaceOrderElementos.inputForm.mes.invoke("val", month);
     }
     static insertarAnio(year){
         PlaceOrderElementos.inputForm.anio.invoke("val", year);
     }
     static clickOnCloseForm(){
-        PlaceOrderElementos.botones.botonClose.click();
+        PlaceOrderElementos.botones.botonClose.click({ force: true });
     }
 
     static clickOnPlaceOrder(){
-        PlaceOrderElementos.botones.botonForm.click();
+        PlaceOrderElementos.botones.botonForm.click({ force: true });
     }
     
+    static insertarTodosLosValoresEnElFormulario(data){
+
+        this.insertarNombre(data.name)
+        this.insertarPais(data.country)
+        this.insertarCiudad(data.city)
+        this.insertarTarjeta(data.card)
+        this.insertarMes(data.month)
+        this.insertarAnio(data.year)
+    }
 
 }

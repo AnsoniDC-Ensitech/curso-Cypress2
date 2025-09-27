@@ -3,7 +3,7 @@ import { ProductoDetalleElementos } from "./productoDetalle.elements";
 
 export class ProductoDetalleMetodos{
     static clickOnAddToCart(){
-        return ProductoDetalleElementos.botonesDetalle.anadirToCarrito.click();
+        return ProductoDetalleElementos.botonesDetalle.anadirToCarrito.click({ force: true });
     }
 
     static VerifyProductDeatilsPagoIsDisplay(){

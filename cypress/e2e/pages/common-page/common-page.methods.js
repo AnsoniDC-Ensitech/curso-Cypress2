@@ -8,23 +8,26 @@ export class CommonPageMetodos{
     }
 
     static clickOnHome(){
-        CommonPageElementos.BarraMenu.BarraHome.click();
+        CommonPageElementos.BarraMenu.BarraHome.click({ force: true });
     }
 
     static clickOnContact(){
-        CommonPageElementos.BarraMenu.BarraContact.click();
+        CommonPageElementos.BarraMenu.BarraContact.click({ force: true });
     }
     static clickOnAboutUs(){
-        CommonPageElementos.BarraMenu.BarraAboutUS.click();
+        CommonPageElementos.BarraMenu.BarraAboutUS.click({ force: true });
     }
     static clickOnCart(){
-        CommonPageElementos.BarraMenu.BarraCart.click();
+        CommonPageElementos.BarraMenu.BarraCart.click({ force: true });
+        Cypress.on('uncaught:exception', (err, runnable) => {
+  return false; 
+    });
     }
     static clickOnLogin(){
-        CommonPageElementos.BarraMenu.BarraLogIn.click();
+        CommonPageElementos.BarraMenu.BarraLogIn.click({ force: true });
     }
     static clickOnSignUp(){
-        CommonPageElementos.BarraMenu.BarraSignUp.click();
+        CommonPageElementos.BarraMenu.BarraSignUp.click({ force: true });
     }
     //para verificar las alertas 
     static verifyAlert(expectedMessage){

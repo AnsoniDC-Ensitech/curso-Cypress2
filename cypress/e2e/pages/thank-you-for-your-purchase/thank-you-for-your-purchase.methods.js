@@ -2,7 +2,7 @@ import { ThankYouForYouPurchaseElementos } from "./thank-you-for-your-purchase.e
 
 export class ThankYouForYouPurchaseMetodos{
     static clickOnOK(){
-        ThankYouForYouPurchaseElementos.butttons.ok.click();
+        ThankYouForYouPurchaseElementos.butttons.ok.click({ force: true });
     }
 
     static verifyIconOfSucess(){

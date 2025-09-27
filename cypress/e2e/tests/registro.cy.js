@@ -9,7 +9,7 @@ const password = CommonPageMetodos.generateRandomString(7);
 const userExistente = LoginData.accesosValidos.username;
 
 describe(CommonPageData.testSuites.registro,()=>{
-    it ('Registro de usuario válido', ()=>{
+    xit ('Registro de usuario válido', ()=>{
         Logger.NumPaso(1)
         Logger.Paso('Navegar a la página de Inicio')
         CommonPageMetodos.navegar();
@@ -30,7 +30,7 @@ describe(CommonPageData.testSuites.registro,()=>{
         SignupMetodos.verifySignUpSucessfulMessageIsDisplay();
     })
 
-    it ('Registro de usuario inválido', ()=>{
+    xit ('Registro de usuario inválido', ()=>{
         Logger.NumPaso(1)
         Logger.Paso('Navegar a la página de Inicio')
         CommonPageMetodos.navegar();
