@@ -4,6 +4,7 @@ import { CommonPageElementos } from "./common-page.elements";
 export class CommonPageMetodos{
     static navegar(){
         cy.clearCookies();
+        cy.clearLocalStorage();
         cy.visit(CommonPageData.url);
     }
 
