@@ -19,6 +19,9 @@ export class CommonPageElementos{
         get BarraSignUp(){
             return cy.contains("a", "Sign up");
         },
+        get BarraLogOut(){
+            return cy.contains('a', 'Log out');
+        }
     };
    }
 

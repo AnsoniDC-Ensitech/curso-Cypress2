@@ -53,4 +53,13 @@ export class CommonPageMetodos{
     static verifyThatExistTextLogIn(username){
         CommonPageElementos.UsuarioLogueado.should("have.text",`Welcome ${username}`);
     }
+
+    //método para salir de sesión y el usuario esta logueado
+    static logOut(){
+        cy.get ('body').then($body=>{
+            if($body.find('#logout2').length>0){
+                 CommonPageElementos.BarraMenu.BarraLogOut.click
+            }
+        });
+    }
 }

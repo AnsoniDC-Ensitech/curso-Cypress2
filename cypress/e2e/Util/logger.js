@@ -30,4 +30,10 @@ export class Logger{
         cy.allure().step(text)
     }
 
+    static postCondicion(description){
+        const text = `POSTCONDICIÓN - ${description}`;
+        //cy.log(text)
+        cy.allure().step(text)
+    }
+
 }

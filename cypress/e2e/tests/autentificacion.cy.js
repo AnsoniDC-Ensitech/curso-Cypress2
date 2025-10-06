@@ -26,6 +26,9 @@ it ('INICIO DE SESIÓN VÁLIDO', ()=>{
     CommonPageMetodos.verifyThatExistTextLogIn(LoginData.accesosValidos.username);
     cy.wait(9000)
 
+    Logger.postCondicion('Log Out')
+    CommonPageMetodos.logOut();
+
 })
 
 it ('INICIO DE SESIÓN INVÁLIDO', ()=>{
