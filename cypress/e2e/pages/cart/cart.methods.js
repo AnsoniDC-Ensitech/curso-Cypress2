@@ -24,11 +24,14 @@ export class CartMetodos{
     }
     //Seleccionar todos los elementos del carrito y eliminarlos
     static deleteProducts(){
-        cy.get('a[onclick*="deleteItem"]').each(link=>{
-            link.click()
-            cy.wait(1000)
+        cy.intercept('POST', 'https://api.demoblaze.com/deleteitem').as('deleteItem')
+        cy.get('a[onclick*="deleteItem"]').each($link=>{ //recorre cada elemento encontrado.
+            cy.wrap($link).click({ force: true }); //da clic en cada uno, aunque esté parcialmente oculto o haya animaciones.
+            //link.click()
+            cy.wait('@deleteItem')
         });
     }
+    
 
     static emptyCart(username, password){
         Logger.subPaso('navegar al sitio DemoBlaze')
