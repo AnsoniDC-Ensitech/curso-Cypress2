@@ -156,7 +156,6 @@ describe(CommonPageData.testSuites.catalogoYCompra, ()=>{
         Logger.NumPaso(13)
         Logger.Paso('Verificar que se muestre mensaje de conformimación y que se redirige a Home')
         ThankYouForYouPurchaseMetodos.verifyIconOfSucess();
-        cy.wait(3000)
         ThankYouForYouPurchaseMetodos.clickOnOK();
         HomePageMetodos.VerifyShownHomePage();
 
