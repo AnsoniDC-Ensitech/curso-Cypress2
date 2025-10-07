@@ -58,7 +58,7 @@ export class CommonPageMetodos{
     //método para salir de sesión y el usuario esta logueado
     static logOut(){
         cy.get ('body').then($body=>{
-            if($body.find('#logout2').length>0){
+            if($body.find('#logout2[style="display: block;"]').length>0){
                  CommonPageElementos.BarraMenu.BarraLogOut.click
             }
         });

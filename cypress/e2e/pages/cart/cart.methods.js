@@ -1,3 +1,6 @@
+import { Logger } from "../../Util/logger";
+import { CommonPageMetodos } from "../common-page/common-page.methods";
+import { LoginMethos } from "../login/login.methods";
 import { CartElementos } from "./cart.elements";
 
 export class CartMetodos{
@@ -18,5 +21,29 @@ export class CartMetodos{
 
     static clickOnButtonPlaceOrder(){
         CartElementos.bottonCart.botonParaOrdenar.click({ force: true });
+    }
+    //Seleccionar todos los elementos del carrito y eliminarlos
+    static deleteProducts(){
+        cy.get('a[onclick*="deleteItem"]').each(link=>{
+            link.click()
+            cy.wait(1000)
+        });
+    }
+
+    static emptyCart(username, password){
+        Logger.subPaso('navegar al sitio DemoBlaze')
+        CommonPageMetodos.navegar();
+        Logger.subPaso('Cierra sesión, si esta logueado')
+        CommonPageMetodos.logOut();
+        Logger.subPaso('Click en el link Home')
+        CommonPageMetodos.clickOnHome();
+        Logger.subPaso('Click en el link Log In')
+        CommonPageMetodos.clickOnLogin();
+        Logger.subPaso(`Iniciar sesión con las credenciales ${username}/${password}`)
+        LoginMethos.iniciarSesion(username,password);
+        Logger.subPaso('Click en el link Cart')
+        CommonPageMetodos.clickOnCart();
+        Logger.subPaso('Seleccionar los productos y eliminarlos')
+        this.deleteProducts();
     }
 }
