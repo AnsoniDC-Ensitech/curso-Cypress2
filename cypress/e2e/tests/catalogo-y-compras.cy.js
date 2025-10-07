@@ -93,6 +93,7 @@ describe(CommonPageData.testSuites.catalogoYCompra, ()=>{
         CommonPageMetodos.logOut();
 
     })
+    // Si se desea solo ejecutar 1 script la estructura es asi: it.only('esceanrio.....')
     it('Realizar una compra', ()=>{
         Logger.NumPaso(1)
         Logger.Paso('Iniciar sesión como usuario correcto')

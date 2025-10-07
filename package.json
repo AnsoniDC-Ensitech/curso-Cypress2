@@ -8,7 +8,9 @@
     "ejecutar-pruebas": "npx cypress run --headed --env allure=true",
     "generar-reporte": "allure generate allure-results -o allure-report --clean",
     "abrir-reporte": "allure open",
-    "test": "run-s limpiar-reporte ejecutar-pruebas generar-reporte abrir-reporte --continue-on-error"
+    "test": "run-s limpiar-reporte ejecutar-pruebas generar-reporte abrir-reporte --continue-on-error",
+    "test-personalizada":"npx cypress run --headed --env allure=true --spec \"cypress/e2e/tests/autentificacion.cy.js\"",
+    "test2":"run-s limpiar-reporte test-personalizada generar-reporte abrir-reporte --continue-on-error"
   },
   "repository": {
     "type": "git",

@@ -5,7 +5,7 @@ import { LoginMethos } from "../pages/login/login.methods";
 import { Logger } from "../Util/logger";
 
 describe(CommonPageData.testSuites.Autentificacion, ()=>{
-it ('INICIO DE SESIÓN VÁLIDO', ()=>{
+it.only ('INICIO DE SESIÓN VÁLIDO', ()=>{
     Logger.NumPaso(1)
     Logger.Paso('Navegar a la pagina de inicio')
     CommonPageMetodos.navegar();
