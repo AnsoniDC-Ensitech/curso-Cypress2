@@ -9,8 +9,11 @@
     "generar-reporte": "allure generate allure-results -o allure-report --clean",
     "abrir-reporte": "allure open",
     "test": "run-s limpiar-reporte ejecutar-pruebas generar-reporte abrir-reporte --continue-on-error",
-    "test-personalizada":"npx cypress run --headed --env allure=true --spec \"cypress/e2e/tests/autentificacion.cy.js\"",
-    "test2":"run-s limpiar-reporte test-personalizada generar-reporte abrir-reporte --continue-on-error"
+    "test-personalizada": "npx cypress run --headed --env allure=true --spec \"cypress/e2e/tests/autentificacion.cy.js\"",
+    "test-personalizada1": "npx cypress run --headed --env allure=true --spec \"cypress/e2e/tests/catalogo-y-compras.cy.js\"",
+    "test2": "run-s limpiar-reporte test-personalizada generar-reporte abrir-reporte --continue-on-error",
+    "cy:parallel": "run-s limpiar-reporte && npx cypress-parallel -s ejecutar-pruebas --ci-build-id $RANDOM --record --parallel generar-reporte",
+    "test3": "run-s limpiar-reporte test-personalizada1 generar-reporte abrir-reporte --continue-on-error"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,7 @@
   "homepage": "https://github.com/AnsoniDC-Ensitech/curso-Cypress2#readme",
   "devDependencies": {
     "cypress": "^15.2.0",
+    "cypress-parallel": "^0.2.2",
     "npm-run-all": "^4.1.5"
   },
   "dependencies": {
